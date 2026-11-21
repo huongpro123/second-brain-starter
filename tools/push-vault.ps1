@@ -1,4 +1,4 @@
-﻿# Đẩy vault lên GitHub remote đang cấu hình (1 lệnh). Chạy từ thư mục vault:
+# Đẩy vault lên GitHub remote đang cấu hình (1 lệnh). Chạy từ thư mục vault:
 #   powershell -ExecutionPolicy Bypass -File tools\push-vault.ps1
 # hoặc: .\tools\push-vault.ps1
 $ErrorActionPreference = 'Stop'

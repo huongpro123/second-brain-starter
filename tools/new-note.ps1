@@ -1,4 +1,4 @@
-﻿#Requires -Version 5.1
+#Requires -Version 5.1
 <#
 .SYNOPSIS
     Tạo note mới trong vault, frontmatter đúng chuẩn, tự thêm dòng vào index.md.

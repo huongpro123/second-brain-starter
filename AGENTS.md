@@ -4,13 +4,23 @@ File này áp dụng cho **mọi công cụ AI agent** (Claude Code, Codex, Gemi
 
 ---
 
-## 0. Khi làm báo cáo / đồ án / luận văn / NCKH / Word
+## 0A. Phòng Thời Gian — Khởi tạo lần đầu cho Agent mới
 
-Khi yêu cầu chạm tới *báo cáo, đồ án (ĐA1/2/3), NCKH, luận văn, KLTN, ĐATN, TTTN, bìa, Word, format, in ấn, số liệu, kết quả, viết chương* → đọc theo đúng thứ tự:
+Nếu đây là **lần đầu mở repo** trên máy mới (chưa có `.venv`, hoặc `wiki/con-nguoi/ho-so-mau.md` vẫn còn `[Điền tên của bạn]`), hoặc người dùng nói *"setup từ đầu / nạp kiến thức / khởi tạo vault"*:
 
-1. `skills/bao-cao-ctut/SKILL.md` — quy trình tạo bìa, xuất ảnh xem trước, chấm điểm ≥90 trước khi nộp.
-2. `wiki/quy-trinh/quy-trinh-bao-cao-ctut.md` — chuẩn **QĐ 345/QĐ-ĐHKTCN 08/4/2025** + hướng dẫn Đồ án (riêng NCKH SV xem `wiki/quy-trinh/nckh-quy-che-sv04.md`).
-3. `wiki/quy-trinh/luat-viet-noi-dung.md` — luật **chống ảo giác** (không số liệu thật = không viết số nào) và `wiki/quy-trinh/quy-uoc-viet-van-khoa-hoc.md` (claim phải có evidence).
+1. Đọc và chạy đúng luồng 4 pha tại `wiki/quy-trinh/phong-thoi-gian-khoi-tao.md`.
+2. Chạy `python tools/setup.py` để dựng `.venv`, cài `requirements.txt`, bật `.githooks/pre-commit`, kiểm tra `health-check.ps1` và chấm toàn bộ mẫu Word (`cham-loat.py`).
+3. Nạp 5 trụ cột tri thức cốt lõi (Pha 2) và hỏi 4 câu cá nhân hóa Vault (Pha 3) rồi kiểm chứng xong trước khi bắt tay vào task.
+
+---
+
+## 0B. Khi làm báo cáo / đồ án / luận văn / NCKH / Word
+
+- Khi yêu cầu chạm tới *báo cáo, đồ án (ĐA1/2/3), NCKH, luận văn, KLTN, ĐATN, TTTN, bìa, Word, format, in ấn, số liệu, kết quả, viết chương* → đọc theo đúng thứ tự:
+  1. `skills/bao-cao-ctut/SKILL.md` — quy trình tạo bìa, xuất ảnh xem trước, chấm điểm ≥90 trước khi nộp.
+  2. `wiki/quy-trinh/quy-trinh-bao-cao-ctut.md` — chuẩn **QĐ 345/QĐ-ĐHKTCN 08/4/2025** + hướng dẫn Đồ án (riêng NCKH SV xem `wiki/quy-trinh/nckh-quy-che-sv04.md`).
+  3. `wiki/quy-trinh/luat-viet-noi-dung.md` — luật **chống ảo giác** (không số liệu thật = không viết số nào) và `wiki/quy-trinh/quy-uoc-viet-van-khoa-hoc.md` (claim phải có evidence).
+- Khi người dùng yêu cầu *phản biện / soi lỗi nội dung / đóng vai hội đồng / kiểm tra kỹ trước khi nộp* → kích hoạt thêm `skills/phan-bien-bao-cao/SKILL.md`.
 
 ---
 
