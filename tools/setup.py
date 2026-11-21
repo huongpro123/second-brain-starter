@@ -99,7 +99,7 @@ def check_environment(py_exec: Path) -> bool:
         status = cmd if cmd else "CHUA CO (tuy chon)"
         print(f"  {label:<16}: {status}")
 
-    print("\n=== 2. KIEM TRA THU VIEN PYTHON ===")
+    print("\n=== 2. KIEM TRA THU VIEN PYTHON ===", flush=True)
     check_code = (
         "import importlib\n"
         "mods = [('docx','python-docx (BAT BUOC)'), ('PIL','pillow'), "
@@ -107,13 +107,13 @@ def check_environment(py_exec: Path) -> bool:
         "for m, label in mods:\n"
         "    try:\n"
         "        importlib.import_module(m)\n"
-        "        print(f'  [OK]   {label}')\n"
+        "        print(f'  [OK]   {label}', flush=True)\n"
         "    except ImportError:\n"
-        "        print(f'  [MISS] {label}')\n"
+        "        print(f'  [MISS] {label}', flush=True)\n"
     )
     subprocess.run([str(py_exec), "-c", check_code], check=False)
 
-    print("\n=== 3. KIEM TRA SUC KHOE VAULT ===")
+    print("\n=== 3. KIEM TRA SUC KHOE VAULT ===", flush=True)
     ps = _find_cmd("pwsh", "powershell")
     hc = ROOT / "tools" / "health-check.ps1"
     vault_ok = True
@@ -125,9 +125,9 @@ def check_environment(py_exec: Path) -> bool:
         res = subprocess.run(cmd, cwd=str(ROOT), check=False)
         vault_ok = res.returncode == 0
     else:
-        print("  [!] Khong thay PowerShell, bo qua health-check.ps1.")
+        print("  [!] Khong thay PowerShell, bo qua health-check.ps1.", flush=True)
 
-    print("\n=== 4. KIEM TRA BO MAU WORD (cham-loat.py) ===")
+    print("\n=== 4. KIEM TRA BO MAU WORD (cham-loat.py) ===", flush=True)
     cham = ROOT / "tools" / "word" / "cham-loat.py"
     tpl = ROOT / "templates" / "word"
     tpl_ok = True
@@ -139,8 +139,8 @@ def check_environment(py_exec: Path) -> bool:
 
 
 def print_global_prompt() -> None:
-    vpath = str(ROOT)
-    print("\n=== 5. PROMPT TOAN CUC SAN DUONG DAN MAY NAY ===")
+    vpath = ROOT.as_posix()
+    print("\n=== 5. PROMPT TOAN CUC SAN DUONG DAN MAY NAY ===", flush=True)
     print("Neu muon agent o CAC REPO KHAC cung dung duoc vault nay, dan khoi sau vao")
     print("~/.claude/CLAUDE.md, ~/.codex/AGENTS.md, hoac Global Rules cua Antigravity/Cursor:\n")
     print("-" * 72)
