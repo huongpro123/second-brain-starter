@@ -8,6 +8,7 @@ Thư mục này chứa các **Agent Skills** chuẩn bị sẵn quy trình + cô
 |---|---|---|---|
 | `bao-cao-ctut/` | Báo cáo Đồ án / ĐATN-KLTN / TTTN / NCKH chuẩn CTUT (**QĐ 345/2025** & **QĐ 886/2022 SV04**) + bộ tool Word + luật chống ảo giác | **1.5.1** | [SKILL.md](bao-cao-ctut/SKILL.md) · [CHANGELOG.md](bao-cao-ctut/CHANGELOG.md) |
 | `phan-bien-bao-cao/` | Kiểm chứng đối nghịch (Adversarial Verification): đóng vai Hội đồng phản biện soi sai lệch số liệu, trích dẫn treo, lỗ hổng thực nghiệm trước khi nộp | **1.0.0** | [SKILL.md](phan-bien-bao-cao/SKILL.md) |
+| `ve-ky-thuat-va-web/` | Vẽ bản vẽ kỹ thuật AutoCAD (`.dxf` qua `ezdxf`, `.lsp`/`.scr`), Revit (`pyRevit`/MCP), BIMvision (`ifcopenshell`/API Bridge/`BCF`), mạch điện `schemdraw` và sơ đồ Web (`Draw.io`, `Excalidraw`, `Mermaid`, `D2`, `SVG`) | **1.1.0** | [SKILL.md](ve-ky-thuat-va-web/SKILL.md) |
 
 ---
 
@@ -22,11 +23,12 @@ Thư mục này chứa các **Agent Skills** chuẩn bị sẵn quy trình + cô
 
 Chạy `python tools/setup.py --check` ngay trong repo để in sẵn đoạn cấu hình đã điền đúng đường dẫn máy bạn (`<VAULT_DIR>`), sau đó gắn vào:
 
-- **Claude Code:** dán vào `~/.claude/CLAUDE.md`, hoặc symlink hai skill sang `~/.claude/skills/`:
+- **Claude Code:** dán vào `~/.claude/CLAUDE.md`, hoặc symlink 3 skill sang `~/.claude/skills/`:
   ```powershell
   New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.claude\skills\bao-cao-ctut" -Target "<VAULT_DIR>\skills\bao-cao-ctut"
   New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.claude\skills\phan-bien-bao-cao" -Target "<VAULT_DIR>\skills\phan-bien-bao-cao"
+  New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.claude\skills\ve-ky-thuat-va-web" -Target "<VAULT_DIR>\skills\ve-ky-thuat-va-web"
   ```
 - **Codex CLI:** gắn khối cấu hình vào `~/.codex/AGENTS.md` hoặc `~/.codex/skills/`.
-- **Antigravity:** tạo global rule/plugin trỏ tới `<VAULT_DIR>\AGENTS.md`, `<VAULT_DIR>\skills\bao-cao-ctut\SKILL.md` và `<VAULT_DIR>\skills\phan-bien-bao-cao\SKILL.md`.
+- **Antigravity:** tạo global rule/plugin trỏ tới `<VAULT_DIR>\AGENTS.md`, `<VAULT_DIR>\skills\bao-cao-ctut\SKILL.md`, `<VAULT_DIR>\skills\phan-bien-bao-cao\SKILL.md` và `<VAULT_DIR>\skills\ve-ky-thuat-va-web\SKILL.md`.
 - **ChatGPT / Gemini / Claude Web (Custom Instructions):** copy khối trong `wiki/quy-trinh/prompt-lam-bao-cao.md` và đính kèm file cần rà soát.

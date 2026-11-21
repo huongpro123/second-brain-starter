@@ -1,4 +1,4 @@
-﻿#Requires -Version 5.1
+#Requires -Version 5.1
 <#
 .SYNOPSIS
     Chạy setup nhanh ("Phòng Thời Gian") cho vault trên Windows PowerShell.

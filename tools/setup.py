@@ -102,8 +102,16 @@ def check_environment(py_exec: Path) -> bool:
     print("\n=== 2. KIEM TRA THU VIEN PYTHON ===", flush=True)
     check_code = (
         "import importlib\n"
-        "mods = [('docx','python-docx (BAT BUOC)'), ('PIL','pillow'), "
-        "('pymupdf','pymupdf (tuy chon render PDF)'), ('win32com.client','pywin32 (Windows Word COM)')]\n"
+        "mods = [\n"
+        "  ('docx','python-docx (Bao cao Word - BAT BUOC)'),\n"
+        "  ('PIL','pillow (Xu ly anh)'),\n"
+        "  ('ezdxf','ezdxf (Ve AutoCAD DXF)'),\n"
+        "  ('schemdraw','schemdraw (Ve mach dien SVG/PNG)'),\n"
+        "  ('matplotlib','matplotlib (Render DXF -> PNG)'),\n"
+        "  ('ifcopenshell','ifcopenshell (Tuy chon BIM/IFC Revit-BIMvision)'),\n"
+        "  ('pymupdf','pymupdf (Tuy chon render bia PDF)'),\n"
+        "  ('win32com.client','pywin32 (Windows Word COM)'),\n"
+        "]\n"
         "for m, label in mods:\n"
         "    try:\n"
         "        importlib.import_module(m)\n"
@@ -144,7 +152,7 @@ def print_global_prompt() -> None:
     print("Neu muon agent o CAC REPO KHAC cung dung duoc vault nay, dan khoi sau vao")
     print("~/.claude/CLAUDE.md, ~/.codex/AGENTS.md, hoac Global Rules cua Antigravity/Cursor:\n")
     print("-" * 72)
-    print(f"""# Second Brain & Quy trinh Bao cao CTUT (Con tro toan cuc)
+    print(f"""# Second Brain, Bao cao CTUT & Ve Ky Thuat (Con tro toan cuc)
 
 Vault goc: `{vpath}`
 
@@ -152,7 +160,9 @@ Vault goc: `{vpath}`
 2. Khi cham toi: bao cao, do an, NCKH, luan van, KLTN, TTTN, bia, Word, format, in an, so lieu, viet chuong:
    - Doc theo thu tu: `{vpath}/skills/bao-cao-ctut/SKILL.md` -> `{vpath}/wiki/quy-trinh/quy-trinh-bao-cao-ctut.md` -> `{vpath}/wiki/quy-trinh/luat-viet-noi-dung.md` -> `{vpath}/wiki/quy-trinh/quy-uoc-viet-van-khoa-hoc.md`.
    - Khong bia so lieu, khong bia nguon; thieu so ghi `[CAN SO LIEU: ...]`.
-   - Khi phan bien/ra soat truoc khi nop: doc `{vpath}/skills/phan-bien-bao-cao/SKILL.md`.""")
+   - Khi phan bien/ra soat truoc khi nop: doc `{vpath}/skills/phan-bien-bao-cao/SKILL.md`.
+3. Khi ve AutoCAD, Revit, BIMvision, IFC, DXF, so do dien, Draw.io, Excalidraw, Mermaid, SVG:
+   - Doc `{vpath}/skills/ve-ky-thuat-va-web/SKILL.md` va `{vpath}/wiki/quy-trinh/quy-trinh-ve-ky-thuat-va-web.md`; luon render PNG / kiem tra truc quan truoc khi ban giao.""")
     print("-" * 72)
 
 

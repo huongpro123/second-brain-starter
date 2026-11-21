@@ -14,13 +14,14 @@ Nếu đây là **lần đầu mở repo** trên máy mới (chưa có `.venv`, 
 
 ---
 
-## 0B. Khi làm báo cáo / đồ án / luận văn / NCKH / Word
+## 0B. Kích hoạt theo loại tác vụ
 
-- Khi yêu cầu chạm tới *báo cáo, đồ án (ĐA1/2/3), NCKH, luận văn, KLTN, ĐATN, TTTN, bìa, Word, format, in ấn, số liệu, kết quả, viết chương* → đọc theo đúng thứ tự:
+- **Báo cáo / Đồ án / Luận văn / NCKH / Word:** Khi yêu cầu chạm tới *báo cáo, đồ án (ĐA1/2/3), NCKH, luận văn, KLTN, ĐATN, TTTN, bìa, Word, format, in ấn, số liệu, kết quả, viết chương* → đọc theo đúng thứ tự:
   1. `skills/bao-cao-ctut/SKILL.md` — quy trình tạo bìa, xuất ảnh xem trước, chấm điểm ≥90 trước khi nộp.
   2. `wiki/quy-trinh/quy-trinh-bao-cao-ctut.md` — chuẩn **QĐ 345/QĐ-ĐHKTCN 08/4/2025** + hướng dẫn Đồ án (riêng NCKH SV xem `wiki/quy-trinh/nckh-quy-che-sv04.md`).
   3. `wiki/quy-trinh/luat-viet-noi-dung.md` — luật **chống ảo giác** (không số liệu thật = không viết số nào) và `wiki/quy-trinh/quy-uoc-viet-van-khoa-hoc.md` (claim phải có evidence).
-- Khi người dùng yêu cầu *phản biện / soi lỗi nội dung / đóng vai hội đồng / kiểm tra kỹ trước khi nộp* → kích hoạt thêm `skills/phan-bien-bao-cao/SKILL.md`.
+- **Phản biện / Soi lỗi báo cáo:** Khi người dùng yêu cầu *phản biện / soi lỗi nội dung / đóng vai hội đồng / kiểm tra kỹ trước khi nộp* → kích hoạt `skills/phan-bien-bao-cao/SKILL.md`.
+- **Vẽ kỹ thuật (AutoCAD · Revit · BIMvision) & Đồ họa Web:** Khi yêu cầu chạm tới *AutoCAD, Revit, BIMvision, IFC, DXF, DWG, AutoLISP, pyRevit, bản vẽ kỹ thuật, sơ đồ nguyên lý, mạch điện, tủ điện, Draw.io, Excalidraw, Mermaid, D2, SVG, Canvas, wireframe web* → đọc `skills/ve-ky-thuat-va-web/SKILL.md` và `wiki/quy-trinh/quy-trinh-ve-ky-thuat-va-web.md`. **Bắt buộc render PNG / kiểm trực quan trước khi bàn giao.**
 
 ---
 

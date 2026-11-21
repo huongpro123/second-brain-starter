@@ -47,8 +47,10 @@
 | [[luat-viet-noi-dung]] | 10 luật **chống ảo giác** khi viết báo cáo: không bịa số, không bịa nguồn | active |
 | [[quy-uoc-viet-van-khoa-hoc]] | Claim–evidence, trích dẫn IEEE, tránh văn kể chuyện, tiểu mục ≥ 2 đoạn | active |
 | [[prompt-lam-bao-cao]] | Prompt 10 dòng để gắn vào system prompt của bất kỳ AI agent nào | active |
+| [[quy-trinh-ve-ky-thuat-va-web]] | **Vẽ kỹ thuật & Web:** AutoCAD DXF/LISP, Revit (`pyRevit`/MCP), BIMvision (`IFC`/Bridge), Draw.io/Excalidraw/SVG | active |
 | Skill `bao-cao-ctut` | [skills/bao-cao-ctut/SKILL.md](skills/bao-cao-ctut/SKILL.md) — `v1.5.1`: quy trình tạo bìa & kiểm báo cáo | active |
 | Skill `phan-bien-bao-cao` | [skills/phan-bien-bao-cao/SKILL.md](skills/phan-bien-bao-cao/SKILL.md) — `v1.0.0`: kiểm chứng đối nghịch trước khi nộp | active |
+| Skill `ve-ky-thuat-va-web` | [skills/ve-ky-thuat-va-web/SKILL.md](skills/ve-ky-thuat-va-web/SKILL.md) — `v1.1.0`: vẽ AutoCAD, Revit, BIMvision & sơ đồ web | active |
 
 ---
 
@@ -72,6 +74,7 @@
 | Mẫu Word ĐATN/KLTN | `mau-luan-van-tot-nghiep.docx` (BM 2.1–2.3, ≥ 40 trang) | `templates/word/luan-van/` |
 | Mẫu Word NCKH | `mau-bao-cao-tong-ket-sv04.docx`, `mau-bao-cao-nckh.docx`, `mau-de-cuong-nckh.docx` | `templates/word/nckh/` |
 | Công cụ Word | 8 script Python: tạo bìa, chuẩn hóa, chấm điểm định dạng & nội dung, xuất PDF | `tools/word/` ([README](templates/word/README.md)) |
+| Công cụ Vẽ kỹ thuật & BIM | 4 script: `tao_khung_a3_dxf.py`, `kiem_tra_dxf.py`, `dxf_to_png.py`, `kiem_tra_ifc.py` | `tools/draw/` |
 | Ảnh xem trước | 10 ảnh bìa, trang xác nhận, Mẫu 2, Mẫu 3, trang nội dung mẫu | `assets/word/` |
 
 ---
