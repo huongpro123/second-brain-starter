@@ -1,0 +1,578 @@
+/* ==========================================================================
+   SECOND BRAIN — "Mực & Tím khói"
+   Cho vault bộ não thứ hai (Second Brain Starter)
+   Chữ: Be Vietnam Pro · Mono: Consolas
+   Bật/tắt: Settings → Appearance → CSS snippets
+   ========================================================================== */
+
+/* ---------- 1. Bảng màu ---------- */
+
+body {
+  --sb-violet: #a78bfa;
+  --sb-violet-hi: #c4b1ff;
+  --sb-violet-soft: rgba(167, 139, 250, 0.13);
+  --sb-violet-line: rgba(167, 139, 250, 0.28);
+  --sb-cyan: #38bdf8;
+  --sb-amber: #fbbf24;
+  --sb-green: #34d399;
+  --sb-rose: #fb7185;
+
+  --sb-ink-0: #0d0c11;
+  --sb-ink-1: #131118;
+  --sb-ink-2: #191722;
+  --sb-ink-3: #221f2d;
+  --sb-line: rgba(255, 255, 255, 0.065);
+  --sb-line-hi: rgba(255, 255, 255, 0.12);
+
+  --sb-text: #e9e6f2;
+  --sb-muted: #a8a2bd;
+  --sb-faint: #6f6a85;
+
+  --sb-sans: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+  --sb-mono: "Consolas", "Cascadia Mono", ui-monospace, monospace;
+
+  --sb-radius: 12px;
+  --sb-radius-sm: 8px;
+}
+
+/* ---------- 2. Biến gốc của Obsidian ---------- */
+
+body {
+  --background-primary: var(--sb-ink-1);
+  --background-primary-alt: var(--sb-ink-1);
+  --background-secondary: var(--sb-ink-0);
+  --background-secondary-alt: var(--sb-ink-0);
+  --background-modifier-border: var(--sb-line);
+  --background-modifier-border-hover: var(--sb-line-hi);
+  --background-modifier-hover: rgba(255, 255, 255, 0.045);
+  --background-modifier-active-hover: var(--sb-violet-soft);
+  --background-modifier-form-field: var(--sb-ink-2);
+
+  --text-normal: var(--sb-text);
+  --text-muted: var(--sb-muted);
+  --text-faint: var(--sb-faint);
+  --text-accent: var(--sb-violet-hi);
+  --text-accent-hover: #d8ccff;
+  --text-on-accent: #14121b;
+  --text-selection: rgba(167, 139, 250, 0.24);
+  --text-highlight-bg: rgba(251, 191, 36, 0.22);
+
+  --interactive-accent: var(--sb-violet);
+  --interactive-accent-hover: #b9a0ff;
+  --interactive-normal: var(--sb-ink-2);
+  --interactive-hover: var(--sb-ink-3);
+
+  --color-accent: var(--sb-violet);
+  --font-interface: var(--sb-sans);
+  --font-text: var(--sb-sans);
+  --font-monospace: var(--sb-mono);
+  --font-text-size: 17px;
+  --line-height-normal: 1.8;
+  --link-color: #c3b0ff;
+  --link-color-hover: #ddd2ff;
+  --link-external-color: #8fd3f4;
+  --link-unresolved-color: var(--sb-rose);
+  --code-background: #17151f;
+  --code-normal: #e6dcff;
+
+  --tag-color: #cbb8ff;
+  --tag-background: var(--sb-violet-soft);
+  --tag-background-hover: rgba(167, 139, 250, 0.22);
+  --tag-border-color: var(--sb-violet-line);
+
+  --h1-size: 2.05em;
+  --h2-size: 1.45em;
+  --h3-size: 1.16em;
+  --h4-size: 1.02em;
+  --h1-weight: 800;
+  --h2-weight: 700;
+  --h3-weight: 650;
+  --h1-line-height: 1.25;
+  --h2-line-height: 1.35;
+
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --radius-l: var(--sb-radius);
+  --scrollbar-thumb-bg: rgba(255, 255, 255, 0.11);
+  --scrollbar-active-thumb-bg: rgba(167, 139, 250, 0.45);
+}
+
+/* ---------- 3. Khung đọc ---------- */
+
+.markdown-preview-view,
+.markdown-source-view.mod-cm6 {
+  --file-line-width: 46rem;
+}
+
+.markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-scroller {
+  padding-top: 2.2rem;
+  padding-bottom: 30vh;
+}
+
+.markdown-reading-view,
+.markdown-preview-view {
+  background-image:
+    radial-gradient(900px 420px at 16% -14%, rgba(167, 139, 250, 0.10), transparent 62%),
+    radial-gradient(760px 340px at 95% -10%, rgba(56, 189, 248, 0.07), transparent 58%);
+  background-repeat: no-repeat;
+}
+
+/* ---------- 4. Chữ ---------- */
+
+.markdown-rendered p,
+.markdown-rendered li {
+  letter-spacing: 0.002em;
+}
+
+.markdown-rendered strong {
+  color: #fff;
+  font-weight: 650;
+}
+
+/* Tiêu đề file (inline title) */
+.inline-title {
+  font-weight: 800 !important;
+  letter-spacing: -0.025em;
+  font-size: 2.15em !important;
+  line-height: 1.2;
+  margin-bottom: 0.8rem !important;
+  background: linear-gradient(96deg, #ffffff 0%, #d8ccff 46%, #8fd8ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 0.15em;
+}
+
+/* h1 */
+.markdown-rendered h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 2.2em;
+  margin-bottom: 0.7em;
+  padding-bottom: 0.45em;
+  border-bottom: 1px solid var(--sb-line);
+}
+
+/* h2 — thanh nhấn bên trái */
+.markdown-rendered h2 {
+  border-left: 3px solid var(--sb-violet);
+  padding-left: 0.62em;
+  margin-top: 2em;
+  margin-bottom: 0.65em;
+  color: #f1eeff;
+  letter-spacing: -0.012em;
+}
+
+.markdown-rendered h3 {
+  margin-top: 1.7em;
+  color: #ded8f5;
+  letter-spacing: -0.005em;
+}
+
+.markdown-rendered h4 {
+  color: var(--sb-muted);
+  text-transform: none;
+}
+
+.markdown-rendered hr {
+  border: none;
+  height: 1px;
+  margin: 2.4em 0;
+  background: linear-gradient(90deg, transparent, var(--sb-line-hi) 20%, var(--sb-line-hi) 80%, transparent);
+}
+
+/* ---------- 5. Liên kết, tag ---------- */
+
+.markdown-rendered a.internal-link,
+.markdown-rendered a.external-link {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.14s ease, color 0.14s ease;
+}
+
+.markdown-rendered a.internal-link:hover,
+.markdown-rendered a.external-link:hover {
+  border-bottom-color: currentColor;
+}
+
+.markdown-rendered a.tag {
+  display: inline-block;
+  padding: 1px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--tag-border-color);
+  font-size: 0.78em;
+  line-height: 1.75;
+  text-decoration: none;
+  vertical-align: 0.08em;
+}
+
+/* ---------- 6. Bảng = thẻ ---------- */
+
+.markdown-rendered table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 1.4em 0;
+  font-size: 0.93em;
+  border: 1px solid var(--sb-line);
+  border-radius: var(--sb-radius);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.014);
+}
+
+.markdown-rendered thead th {
+  background: rgba(167, 139, 250, 0.10);
+  font-weight: 650;
+  font-size: 0.94em;
+  letter-spacing: 0.02em;
+  color: #efeaff;
+  border: none;
+  border-bottom: 1px solid var(--sb-line-hi);
+  padding: 11px 16px;
+  text-align: left;
+}
+
+.markdown-rendered tbody td {
+  border: none;
+  border-bottom: 1px solid var(--sb-line);
+  padding: 11px 16px;
+  vertical-align: top;
+}
+
+.markdown-rendered tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.markdown-rendered tbody tr {
+  transition: background 0.12s ease;
+}
+
+.markdown-rendered tbody tr:hover td {
+  background: rgba(167, 139, 250, 0.055);
+}
+
+.markdown-rendered table code {
+  background: transparent;
+  color: #d9cbff;
+  padding: 0;
+  border: none;
+}
+
+/* ---------- 7. Callout ---------- */
+
+.callout {
+  border-radius: var(--sb-radius);
+  border: 1px solid var(--sb-line);
+  border-left: 3px solid rgb(var(--callout-color, 167, 139, 250));
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0)) ,
+    rgba(255, 255, 255, 0.008);
+  padding: 15px 18px;
+  margin: 1.4em 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045);
+}
+
+.callout-title {
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  gap: 9px;
+}
+
+.callout-content p:last-child {
+  margin-bottom: 0;
+}
+
+.callout[data-callout="abstract"] {
+  background:
+    linear-gradient(135deg, rgba(167, 139, 250, 0.16), rgba(56, 189, 248, 0.06) 55%, transparent),
+    rgba(255, 255, 255, 0.01);
+  border-left-width: 3px;
+}
+
+.callout[data-callout="warning"],
+.callout[data-callout="danger"] {
+  background:
+    linear-gradient(135deg, rgba(251, 113, 133, 0.14), transparent 60%),
+    rgba(255, 255, 255, 0.01);
+}
+
+.callout[data-callout="success"],
+.callout[data-callout="tip"] {
+  background:
+    linear-gradient(135deg, rgba(52, 211, 153, 0.11), transparent 60%),
+    rgba(255, 255, 255, 0.01);
+}
+
+/* ---------- 8. Code, blockquote ---------- */
+
+.markdown-rendered code {
+  font-family: var(--sb-mono);
+  font-size: 0.88em;
+  background: #1b1926;
+  color: #e8ddff;
+  padding: 0.14em 0.42em;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.markdown-rendered pre {
+  background: #15131d;
+  border: 1px solid var(--sb-line);
+  border-radius: var(--sb-radius);
+  padding: 16px 18px;
+  overflow-x: auto;
+}
+
+.markdown-rendered pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 0.86em;
+  line-height: 1.65;
+}
+
+.markdown-rendered blockquote {
+  border-left: 3px solid var(--sb-violet-line);
+  background: linear-gradient(90deg, rgba(167, 139, 250, 0.06), transparent 70%);
+  border-radius: 0 var(--sb-radius-sm) var(--sb-radius-sm) 0;
+  padding: 0.65em 1.1em;
+  margin: 1.3em 0;
+  color: var(--sb-muted);
+  font-style: normal;
+}
+
+/* ---------- 9. Task ---------- */
+
+.markdown-rendered .task-list-item-checkbox,
+input[type="checkbox"] {
+  border-radius: 5px;
+  border: 1.5px solid var(--sb-faint);
+  width: 1.02em;
+  height: 1.02em;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+
+.markdown-rendered .task-list-item-checkbox:checked,
+input[type="checkbox"]:checked {
+  background-color: var(--sb-violet);
+  border-color: var(--sb-violet);
+}
+
+.markdown-rendered li.task-list-item:has(> input:checked) {
+  color: var(--sb-faint);
+}
+
+/* ---------- 10. Ảnh ---------- */
+
+.markdown-rendered img {
+  border-radius: var(--sb-radius);
+  max-width: 100%;
+}
+
+.markdown-rendered img[alt="cover"] {
+  width: 100%;
+  display: block;
+  margin: -0.6rem 0 1.9rem;
+  border-radius: 16px;
+  box-shadow: 0 26px 60px -30px rgba(0, 0, 0, 0.95);
+}
+
+/* ---------- 11. Sidebar / file explorer ---------- */
+
+.nav-file-title,
+.nav-folder-title {
+  border-radius: var(--sb-radius-sm);
+  margin: 1px 8px;
+  padding: 4px 9px;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.nav-file-title.is-active {
+  background: linear-gradient(90deg, var(--sb-violet-soft), transparent 85%);
+  box-shadow: inset 2px 0 0 var(--sb-violet);
+  color: #f2edff;
+  font-weight: 600;
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+  background: rgba(255, 255, 255, 0.045);
+}
+
+/* icon + màu theo khu */
+
+.nav-file-title[data-path="index.md"] .nav-file-title-content::before { content: "🏠  "; }
+.nav-file-title[data-path="log.md"] .nav-file-title-content::before { content: "🧾  "; }
+.nav-file-title[data-path="AGENTS.md"] .nav-file-title-content::before { content: "⚖️  "; }
+.nav-file-title[data-path="CLAUDE.md"] .nav-file-title-content::before { content: "🤖  "; }
+
+.nav-folder-title[data-path="wiki"] .nav-folder-title-content::before { content: "🧠  "; }
+.nav-folder-title[data-path="raw"] .nav-folder-title-content::before { content: "🗄️  "; }
+.nav-folder-title[data-path="tools"] .nav-folder-title-content::before { content: "🛠️  "; }
+.nav-folder-title[data-path="templates"] .nav-folder-title-content::before { content: "🧩  "; }
+.nav-folder-title[data-path="assets"] .nav-folder-title-content::before { content: "🖼️  "; }
+
+.nav-folder-title[data-path="wiki/du-an"] .nav-folder-title-content { color: #c9b8ff; }
+.nav-folder-title[data-path="wiki/con-nguoi"] .nav-folder-title-content { color: #f7cf85; }
+.nav-folder-title[data-path="wiki/he-thong"] .nav-folder-title-content { color: #8fd3f4; }
+.nav-folder-title[data-path="wiki/y-tuong"] .nav-folder-title-content { color: #7fe3c1; }
+
+.nav-folder-title[data-path="wiki/du-an"] .nav-folder-title-content::before { content: "⚙️  "; }
+.nav-folder-title[data-path="wiki/con-nguoi"] .nav-folder-title-content::before { content: "🧑  "; }
+.nav-folder-title[data-path="wiki/he-thong"] .nav-folder-title-content::before { content: "💻  "; }
+.nav-folder-title[data-path="wiki/y-tuong"] .nav-folder-title-content::before { content: "💡  "; }
+
+/* ---------- 12. Thanh bên, tab, scrollbar ---------- */
+
+.workspace-ribbon,
+.side-dock-ribbon {
+  border-right: 1px solid var(--sb-line);
+  background: var(--sb-ink-0);
+}
+
+.workspace-tab-header.is-active {
+  color: #f2edff;
+  box-shadow: inset 0 -2px 0 var(--sb-violet);
+}
+
+.workspace-tab-header-container {
+  border-bottom: 1px solid var(--sb-line);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(167, 139, 250, 0.42);
+  background-clip: content-box;
+}
+
+.status-bar {
+  border-top: 1px solid var(--sb-line);
+  background: var(--sb-ink-0);
+  color: var(--sb-faint);
+}
+
+.search-result-file-title,
+.tree-item-self.is-active {
+  background: var(--sb-violet-soft);
+  border-radius: var(--sb-radius-sm);
+}
+
+/* ---------- 13. Dashboard (index.md có cssclasses: dashboard) ---------- */
+
+.dashboard h2 {
+  border-left: none;
+  padding-left: 0;
+  font-size: 1.28em;
+  letter-spacing: 0.01em;
+  margin-top: 2.4em;
+  color: #efeaff;
+}
+
+.dashboard h2::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 0.55em;
+  background: linear-gradient(90deg, var(--sb-violet-line), transparent 72%);
+}
+
+.dashboard .callout[data-callout="abstract"] {
+  padding: 18px 22px;
+  border-radius: 14px;
+}
+
+.dashboard .callout[data-callout="abstract"] .callout-title {
+  font-size: 1.02em;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--sb-violet-hi);
+}
+
+/* ---------- 14. Giọng đọc của graph & canvas ---------- */
+
+.graph-view.color-fill {
+  opacity: 0.92;
+}
+
+.canvas-node {
+  border-radius: 14px;
+}
+
+/* ---------- 15. Light theme (khi bạn đổi sang nền sáng) ---------- */
+
+body.theme-light {
+  --sb-ink-0: #f7f4ee;
+  --sb-ink-1: #fbf9f4;
+  --sb-ink-2: #efebe2;
+  --sb-ink-3: #e6e0d4;
+  --sb-line: rgba(24, 20, 34, 0.10);
+  --sb-line-hi: rgba(24, 20, 34, 0.18);
+  --sb-violet-soft: rgba(109, 40, 217, 0.09);
+  --sb-violet-line: rgba(109, 40, 217, 0.32);
+  --sb-text: #1b1725;
+  --sb-muted: #5d566f;
+  --sb-faint: #8b8499;
+  --background-primary: var(--sb-ink-1);
+  --background-primary-alt: var(--sb-ink-1);
+  --background-secondary: var(--sb-ink-0);
+  --background-secondary-alt: var(--sb-ink-0);
+  --text-normal: var(--sb-text);
+  --text-muted: var(--sb-muted);
+  --text-faint: var(--sb-faint);
+  --code-background: #f1ece2;
+  --code-normal: #4b2e83;
+}
+
+body.theme-light .markdown-reading-view,
+body.theme-light .markdown-preview-view {
+  background-image:
+    radial-gradient(900px 420px at 16% -14%, rgba(139, 92, 246, 0.09), transparent 62%),
+    radial-gradient(760px 340px at 95% -10%, rgba(14, 165, 233, 0.06), transparent 58%);
+}
+
+body.theme-light .inline-title {
+  background: linear-gradient(96deg, #241a3d 0%, #5b3fd1 55%, #0b6f96 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.theme-light .markdown-rendered h2 { color: #2a2140; }
+body.theme-light .markdown-rendered h3 { color: #3a3152; }
+body.theme-light .markdown-rendered table { background: rgba(255, 255, 255, 0.55); }
+body.theme-light .markdown-rendered code {
+  background: #f0ebe1;
+  color: #4b2e83;
+  border-color: rgba(24, 20, 34, 0.07);
+}
+body.theme-light .markdown-rendered pre { background: #f4f0e8; }
+body.theme-light .nav-file-title.is-active { color: #2a2140; }
+
+/* ---------- 16. In ấn ---------- */
+
+@media print {
+  .markdown-preview-view { padding: 0; }
+  .markdown-rendered h2 { border-left: none; padding-left: 0; }
+  .markdown-rendered table { background: transparent; }
+}
+
+
+/* ---------- Khu quy trinh (them 2026-11-18) ---------- */
+.nav-folder-title[data-path="wiki/quy-trinh"] .nav-folder-title-content { color: var(--accent-amber, #fbbf24); font-weight: 600; }
+.nav-folder-title[data-path="wiki/quy-trinh"]::before { content: "\1F4CB"; margin-right: 6px; opacity: .9; }

@@ -1,0 +1,25 @@
+# Obsidian workspace & cache
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Heavy raw binaries (keep lightweight notes/transcripts, skip huge archives)
+raw/**/*.pdf
+raw/**/*.zip
+raw/**/*.mp4
+raw/**/*.mkv
+raw/**/*.docx
+
+# Python & temporary artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.bak
+~$*.docx

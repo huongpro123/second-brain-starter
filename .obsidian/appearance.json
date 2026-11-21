@@ -1,0 +1,16 @@
+{
+  "accentColor": "#a78bfa",
+  "theme": "obsidian",
+  "baseFontSize": 17,
+  "nativeMenus": false,
+  "translucency": true,
+  "interfaceFontFamily": "Be Vietnam Pro",
+  "textFontFamily": "Be Vietnam Pro",
+  "monospaceFontFamily": "Consolas",
+  "cssTheme": "",
+  "enabledCssSnippets": [
+    "second-brain-pretty"
+  ],
+  "showViewHeader": true,
+  "showRibbon": true
+}
